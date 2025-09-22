@@ -1,5 +1,8 @@
 # olymp-anomalies-2023
 # All-Russian Astronomy Olympiad (2023): Regional Anomalies
+Independent analysis of the 2023 All-Russian Astronomy Olympiad results.
+Score distributions for Moscow Region vs other regions show systematic anomalies
+consistent with prior task exposure (leakage).
 
 This repo documents a small independent study of the **2023 All-Russian Astronomy Olympiad**.
 We compare score distributions of the **Moscow Region (MO)** vs **the rest of Russia** for Blitz, Theory, and Practical tasks (grades 9 and 10).
