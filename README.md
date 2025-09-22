@@ -31,6 +31,3 @@ To make this **statistically tight**, we aggregate counts per score bin and run:
 - multiple-testing control (Benjamini–Hochberg), and effect sizes (Cohen’s *h*, Cliff’s *δ*).
 
 When raw counts are added into `/data/bins_mo_vs_rest_agg.csv`, the notebook (TBD) reproduces the p-values and plots.
-
-**Author:** anonymous student (CS + Physics).  
-**Purpose:** portfolio sample for OSINT/investigation track (Get Lost 2025).
