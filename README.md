@@ -1,6 +1,4 @@
 # olymp-anomalies-2023
-# All-Russian Astronomy Olympiad (2023): Regional Anomalies
-# Astronomy Olympiad Anomalies (2023)
 
 Independent analysis of the **All-Russian Astronomy Olympiad 2023** (grades 9–10).  
 We compare score distributions of the **Moscow Region (MO)** with other regions.
