@@ -17,8 +17,8 @@ compatible with prior exposure to leaked tasks.
 - Pattern repeats across grades 9 and 10, reducing likelihood of random chance.
 
 ## Example Graphs
-![Blitz Example](graphs/blitz1.png)
-![Theory Example](graphs/theor9-4.png)
+![Blitz Example](data/graphs/blitz1.png)
+![Theory Example](data/graphs/theor9-4.png)
 
 > Evidence is based on open sources and educational results; no personal data used. Findings are indicative (not a legal conclusion).
 
