@@ -51,5 +51,3 @@ See `/data/scores_2023_schema.csv` and `/data/bins_mo_vs_rest_agg.csv`.
 - Multiple tasks in both grades show **consistent MO right-shifts** and **top-bin spikes** absent in other regions.
 - The pattern is **broad (many items)** and **directionally consistent**, which reduces the likelihood of random fluctuation.
 - Pending quantitative tests on published counts, the evidence is **compatible with prior task exposure** in MO.
-
-> This is an OSINT-style statistical screening; final claims require the raw counts per bin and pre-registered thresholds.
