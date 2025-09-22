@@ -1,17 +1,26 @@
 # olymp-anomalies-2023
 # All-Russian Astronomy Olympiad (2023): Regional Anomalies
-Independent analysis of the 2023 All-Russian Astronomy Olympiad results.
-Score distributions for Moscow Region vs other regions show systematic anomalies
-consistent with prior task exposure (leakage).
+# Astronomy Olympiad Anomalies (2023)
 
-This repo documents a small independent study of the **2023 All-Russian Astronomy Olympiad**.
-We compare score distributions of the **Moscow Region (MO)** vs **the rest of Russia** for Blitz, Theory, and Practical tasks (grades 9 and 10).
+Independent analysis of the **All-Russian Astronomy Olympiad 2023** (grades 9–10).  
+We compare score distributions of the **Moscow Region (MO)** with other regions.
 
-**Hypothesis.** MO distributions show systematic right-shifts / top-bin spikes consistent with **prior task exposure (leakage)**.
+**Hypothesis:** Results from MO show consistent right-shifts and top-bin spikes,  
+compatible with prior exposure to leaked tasks.
 
-- 📊 Graphs: see `/graphs`.
-- 🧪 Methods & stats plan: see `2023_astronomy_analysis.md`.
-- 🧾 Data schema: see `/data/README_data.md`.
+## Contents
+- 📊 Graphs: `/data/graphs/`
+- 📂 Raw OriginLab files: `/data/opju/`
+- 📝 Report with methodology and findings: `REPORT.md`
+
+## Key Observations
+- MO participants systematically overrepresented in high-score bins.
+- Distributions in multiple Theory, Practical, and Blitz tasks are skewed.
+- Pattern repeats across grades 9 and 10, reducing likelihood of random chance.
+
+## Example Graphs
+![Blitz Example](graphs/blitz1.png)
+![Theory Example](graphs/theor9-4.png)
 
 > Evidence is based on open sources and educational results; no personal data used. Findings are indicative (not a legal conclusion).
 
