@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.so
+
+# Virtual environments
+.venv/
+env/
+venv/
+
+# Jupyter / notebooks
+.ipynb_checkpoints/
+*.ipynb
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Logs / temp
+*.log
+*.tmp
+*.swp
+*.bak
+
+# Reports and generated files
+reports/*.csv
+reports/*.png
+reports/*.pdf
+reports/*.md
+
+# Data (если не хочешь хранить сырые данные в гите)
+data/raw/*
+data/interim/*
+data/processed/*
+
+# Archives
+*.zip
+*.tar
+*.gz
+*.rar
