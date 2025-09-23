@@ -1,43 +1,53 @@
-# olymp-anomalies-2023
+# MO vs Rest — OSINT analysis (astronomy olympiad 2023)
 
-Independent analysis of the **All-Russian Astronomy Olympiad 2023** (grades 9–10).  
-We compare score distributions of the **Moscow Region (MO)** with other regions.
+**Goal:** Reproducible, transparent OSINT-style analysis comparing **Moscow Oblast (MO)** vs **Rest of regions** on per-task scores.
 
-**Hypothesis:** Results from MO show consistent right-shifts and top-bin spikes,  
-compatible with prior exposure to leaked tasks.
+## TL;DR (2 minutes)
+1. Put your Excel file with **3 sheets (9/10/11)** into `data/raw/`. Example name: `vsos2023-stat.xlsx`.
+2. Install deps:
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. Run the pipeline end-to-end:
+   ```bash
+   python scripts/make_dataset.py --input data/raw/vsos2023-stat.xlsx
+   python scripts/run_stats.py
+   python scripts/make_figures.py
+   ```
+4. (Optional) Launch interactive demo:
+   ```bash
+   streamlit run app/app.py
+   ```
 
-## Contents
-- 📊 Graphs: `/data/graphs/`
-- 📂 Raw OriginLab files: `/data/opju/`
-- 📝 Report with methodology and findings: `REPORT.md`
+## What this repo does
+- **Loads** your Excel (3 sheets) or CSVs, cleans regions, maps to `MO` vs `Rest`.
+- **Builds per-task distributions** with fixed bins.
+- **Runs statistical tests** (chi-square/Fisher, Mann–Whitney, FDR correction).
+- **Exports figures** and a **stats summary** ready for your hackathon portfolio.
+- **Provenance & ethics** docs to fit OSINT expectations.
 
-## Key Observations
-- MO participants systematically overrepresented in high-score bins.
-- Distributions in multiple Theory, Practical, and Blitz tasks are skewed.
-- Pattern repeats across grades 9 and 10, reducing likelihood of random chance.
+### Expected columns (flexible but recommended)
+- `region` (raw region name), `grade` (9/10/11), task columns like `task1`, `task2`, ..., or a wide table per grade.
+- If your sheet names differ, adjust `config.json`.
 
-## Example Graphs
-![Blitz Example](data/graphs/blitz1.png)
-![Theory Example](data/graphs/theor9-4.png)
+## Files you touch
+- **`data/raw/vsos2023-stat.xlsx`** — your source file (3 sheets).
+- **`config.json`** — sheet names, region synonyms, task pattern.
 
-> Evidence is based on open sources and educational results; no personal data used. Findings are indicative (not a legal conclusion).
+## Outputs
+- `data/interim/scores_tidy.csv`
+- `data/processed/bins_mo_vs_rest_agg.csv`
+- `reports/stats_summary.csv`
+- `reports/figures/*.png`
 
-## Headline observations (visual)
-Across multiple 2023 tasks, MO shows:
-- **Top-heavy distributions** (higher share of max/near-max scores) vs other regions.
-- **Suppressed low bins** + **peaks at top bins** repeating across tasks.
-- **Consistency across categories**: Blitz, several Theory items, and Practical.
+## One-sentence pitch
+> Reproducible OSINT-grade analysis of olympiad task performance: MO vs Rest — per-task distributions, rigorous stats, clean provenance.
 
-Examples (see images):
-- `theor9-4.png`, `theor9-5.png`, `theor9-6.png` — repeated right-shift / top spikes in MO.
-- `prak9-7.png`, `prak9-8.png` — MO mass concentrated at higher totals.
-- `theor10-1.png` & `practical10-7.png` — MO peak near top with depleted lower bins.
-- `blitz1.png`, `blitz2.png` — MO vs Regions patterns diverge across many BL items.
+---
 
-## What’s next
-To make this **statistically tight**, we aggregate counts per score bin and run:
-- χ² goodness-of-fit (binned), KS / Mann–Whitney for ordinal scores,
-- tail-enrichment tests for **max / (max−1)** bins (Fisher’s exact, risk ratio),
-- multiple-testing control (Benjamini–Hochberg), and effect sizes (Cohen’s *h*, Cliff’s *δ*).
-
-When raw counts are added into `/data/bins_mo_vs_rest_agg.csv`, the notebook (TBD) reproduces the p-values and plots.
+### Portfolio checkboxes
+- ✅ Reproducible pipeline (scripts + modules)
+- ✅ CI-ready (pytest stubs)
+- ✅ OSINT provenance & ethics docs
+- ✅ Figures + single-page summary
+- ✅ Optional interactive demo (Streamlit)

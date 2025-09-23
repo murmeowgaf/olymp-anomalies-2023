@@ -1,0 +1,26 @@
+{
+  "sheet_map": {
+    "grade9": "Grade 9",
+    "grade10": "Grade 10",
+    "grade11": "Grade 11"
+  },
+  "region_synonyms_mo": [
+    "московская область",
+    "московская обл.",
+    "мос обл",
+    "мособл",
+    "moscow region",
+    "moskovskaya oblast"
+  ],
+  "task_prefix": "task",
+  "task_count": 10,
+  "bin_edges": [
+    0,
+    2,
+    4,
+    6,
+    8,
+    10
+  ],
+  "max_task_score": 10
+}
